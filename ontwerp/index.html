@@ -24,7 +24,7 @@ a{color:#FFFFFF}a:hover{color:#D9D4F5}
 .vfoto{animation:omhoog .5s ease-out both}
 @keyframes opduiken{0%{transform:translateY(100%)}70%{transform:translateY(-6%)}85%{transform:translateY(2%)}100%{transform:translateY(0)}}
 .popimg{animation:opduiken 1.3s .6s cubic-bezier(.3,.9,.4,1) both}
-.vtekst{animation:infaden 1.4s 1.2s ease-in-out both}
+.vtekst{animation:infaden .9s .6s ease-in-out both}
 @media (prefers-reduced-motion: reduce){.vfoto,.vtekst{animation:none}}
 .wit .vbtn{color:#25167A;border-color:rgba(37,22,122,.3)}
 .wit .vbtn:hover{border-color:#25167A}
@@ -34,17 +34,25 @@ a{color:#FFFFFF}a:hover{color:#D9D4F5}
 html{scroll-behavior:smooth}
 body{background:#351FB7}
 .reveal .r-foto{opacity:0;transition:opacity .6s ease-out;will-change:transform}
-.reveal .r-tekst{opacity:0;transition:opacity 1.4s ease-in-out 1.2s}
+.reveal .r-tekst{opacity:0;transition:opacity .9s ease-in-out .6s}
 .reveal.in .r-foto,.reveal.in .r-tekst{opacity:1}
 .pop:not(.in) .popimg{animation:none;transform:translateY(100%)}
 .vpanel.go .vfoto{animation:omhoog .5s ease-out both}
-.vpanel.go .vtekst{animation:infaden 1.4s 1.2s ease-in-out both}
+.vpanel.go .vtekst{animation:infaden .9s .6s ease-in-out both}
 @media (prefers-reduced-motion: reduce){.reveal .r-foto,.reveal .r-tekst{opacity:1;transition:none}}
 </style>
 
-</head>
+<style>
+html,body{overflow-x:hidden}
+.pagina{overflow:visible!important;border-radius:0!important}
+#vakgebieden{box-shadow:0 0 0 100vmax #007D68;clip-path:inset(0 -100vmax)}
+#onderzoek{box-shadow:0 0 0 100vmax #000000;clip-path:inset(0 -100vmax)}
+img[alt^="Studente en onderzoeker"]{left:calc(50% - 50vw)!important;width:100vw!important;border-radius:0!important}
+section svg[width="160"][height="185"]{left:calc(50% - 50vw - 40px)!important}
+.voet{background:#000;margin-top:72px}.voet img{display:block;width:100%;max-width:960px;margin:0 auto}
+@media (min-width:1300px){.voet img{max-width:1100px}}
+</style></head>
 <body>
-<script>function _z(){document.body.style.zoom=Math.max(1,Math.min(innerWidth/1000,1.6))}addEventListener("resize",_z);document.addEventListener("DOMContentLoaded",_z)</script>
 
 <div class="pagina" style="width: 100%; max-width: 960px; margin: 0 auto; box-sizing: border-box; background: #351FB7; border-radius: 20px; color: #FFFFFF; font-family: 'Open Sans', Arial, sans-serif; position: relative; overflow: hidden"><img src="img/hva-header.jpg" alt="Navigatie van hva.nl" style="display:block;width:100%;margin-bottom:12px">
 <section style="position: relative; height: 900px">
@@ -474,7 +482,7 @@ body{background:#351FB7}
   </div>
 </section></div>
 
-<img src="img/hva-footer.jpg" alt="Footer van hva.nl" style="display:block;width:100%;max-width:960px;margin:72px auto 0">
+<div class="voet"><img src="img/hva-footer.jpg" alt="Footer van hva.nl"></div>
 <script>
 {
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
